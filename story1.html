@@ -126,6 +126,22 @@
         
     </div>
 </div>
+<script>
+    window.onload = function() {
+        // 保存されている名前を呼び出す
+        let savedName = localStorage.getItem('dreamName');
+        
+        // もし名前が空っぽなら、デフォルトの名前（例：名無し）にする
+        if (!savedName) {
+            savedName = "ナマエ";
+        }
 
+        // ページ内の「〇〇」をすべて保存された名前に置き換える
+        const bodyText = document.querySelector('.novel-text');
+        if (bodyText) {
+            bodyText.innerHTML = bodyText.innerHTML.replace(/#name#/g, savedName);
+        }
+    }
+</script> 
 </body>
 </html>
