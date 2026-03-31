@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品タイトル｜サイト名</title>
+    <style>
+        /* 小説を読みやすくする専用CSS */
+        body { 
+            font-family: "Hiragino Mincho ProN", "MS Mincho", serif; /* 明朝体 */
+            line-height: 2; /* 行間を広くして読みやすく */
+            color: #333; 
+            max-width: 550px; 
+            margin: 50px auto; 
+            padding: 0 25px; 
+            background-color: #fdfdfd; 
+            word-wrap: break-word;
+        }
+        h1 { font-size: 1.4em; text-align: center; margin-bottom: 50px; color: #555; }
+        
+        /* 本文エリア：改行をそのまま反映させる魔法の命令 */
+        .novel-body { 
+            white-space: pre-wrap; 
+            font-size: 1.05em;
+            letter-spacing: 0.05em; /* 文字の間隔を少し広げる */
+        }
+
+        .navigation { 
+            margin-top: 80px; 
+            text-align: center; 
+            border-top: 1px solid #eee; 
+            padding-top: 20px; 
+        }
+        .navigation a { text-decoration: none; color: #888; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <h1>作品タイトル</h1>
+
+    <div class="novel-body">
+ここに本文を書いていきます。
+スマホで打った「改行」がそのまま反映されるので、
+HTMLタグをいちいち入れなくて大丈夫です。
+
+「――っ、待って！」
+
+あの日、僕が伝えたかった言葉は……。
+（ここに続きをペースト！）
+    </div>
+
+    <div class="navigation">
+        <a href="novel_index.html">Index（目次）に戻る</a>
+    </div>
+
+</body>
+</html>
