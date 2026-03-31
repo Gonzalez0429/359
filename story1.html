@@ -3,59 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
     
     <style>
+        /* 全体の基本設定 */
+        body { 
+            background-color: #fff; /* 背景はごく薄いグレー */
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center; /* 左右中央に配置 */
+        }
 
-    body { 
-        margin: 50px 50px !important; 
-        max-width: 600px !important; 
-        padding: 0 25px; 
-        line-height: 2; 
-        font-family: serif;
-        background-color: #fdfdfd;
-    }
-    .novel-body { 
-        white-space: pre-wrap; 
-        text-align: justify;
-    }
-    h1 { text-align: center; margin-bottom: 30px; }
+        /* 本文が入る箱（ここで余白と幅をコントロール） */
+        .container { 
+            width: 85%;            /* スマホでの基本幅 */
+            max-width: 500px;      /* 左右余白を多めにするために幅を少し狭めに設定 */
+            margin: 60px 0;        /* 上下の余白 */
+            color: #55618d;        /* 指定の文字色 */
+            
+            /* 書体を游明朝に（入っていない端末用に予備も指定） */
+            font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", serif;
+            font-size: 0.9em;      /* 文字サイズを少し小さめに */
+            line-height: 2;      /* 行間をゆったりと */
+        }
 
+        /* タイトルの設定 */
+        h1 { 
+            text-align: center;    /* 真ん中寄せ */
+            font-size: 1.3em;      /* タイトルも控えめなサイズに */
+            margin-bottom: 40px;   /* 本文との間隔 */
+            font-weight: normal; 
+        }
 
-    .novel-body { 
-        /* 3. 自動改行（メモ帳の改行をそのまま反映） */
-        white-space: pre-wrap; 
-        /* 4. 文末の右側を綺麗に揃える（両端揃え） */
-        text-align: justify; 
-        /* 文字の間隔を少しだけ広げる（読みやすさUP） */
-        letter-spacing: 0.05em; 
-        font-size: 1.05em;
-    }
+        /* 本文の設定 */
+        .novel-text { 
+            white-space: pre-wrap; /* 自動改行（メモ帳の改行を反映） */
+            text-align: justify;   /* 文末を綺麗に揃える */
+            word-wrap: break-word; /* 長い単語でもはみ出さない */
+            letter-spacing: 0.05em; /* 文字間を少し広げて読みやすく */
+        }
 
-    h1 { 
-    text-align: center;    /* これが「真ん中に寄せろ」という命令です */
-    font-size: 1.5em;      /* 文字の大きさ（お好みで） */
-    margin-top: 40px;      /* 上の余白 */
-    margin-bottom: 30px;   /* 下の余白（本文との間隔） */
-    color: #55618d;           /* 文字の色 */
-    font-weight: normal;   /* 太字にしたくない場合はこれを入れる */
-}
-
-    }
-
-    .navigation { 
-        margin-top: 100px; 
-        text-align: center; 
-        font-size: 0.9em;
-    }
-    .navigation a { text-decoration: none; color: #888; }
-</style>
-
+        /* 戻るリンク */
+        .nav { 
+            margin-top: 100px; 
+            text-align: center; 
+        }
+        .nav a { 
+            text-decoration: none; 
+            color: #888; 
+            font-size: 0.85em;
+        }
     </style>
 </head>
 <body>
 
+<div class="container">
     <h1>いろはうた(壱)</h1>
-  <div class="novel-body">
+
+    <div class="novel-text">
 曹魏の最前線を守る将、満寵の執務室は、およそ一国の重鎮が住まう場所とは思えない惨状を呈していた。床には墨の滲んだ設計図が幾重にも重なり、その隙間を埋めるように精巧な歯車や、用途不明の木片が散乱している。その混沌の主は、墨と木と古紙が混ざり合う独特な香りの中、膝をついて床に這いつくばり、熱心に何かを指でなぞっていた。白と青を基調とした長い羽織の裾に埃が被っているが、本人は一向に気にする様子もない。
 
 「……満寵殿。また釦、掛け違えていますよ」
@@ -114,12 +120,12 @@
 「さあ、この難題の究明を続けようか。いろは四十七文字がすべて揃った時、誰が『咎無き者』として死ぬことになるのか……。私が設計したこの城で、真実の照合といこう」
 
 満寵は#name#の耳元で密やかに囁くと、一歩、更に光の届かぬ奥底へと踏み出した。
-　
     </div>
 
-    <div class="navigation">
+    <div class="nav">
         
     </div>
+</div>
 
 </body>
 </html>
