@@ -248,7 +248,7 @@ button[type=submit] {
  <style>
     body {
         /* 1. 上下左右にたっぷり余白（上下50px、左右は自動で真ん中寄せ） */
-        margin: 50px auto; 
+        margin: 50px 50px; 
         /* 2. 画面の幅を制限（読みやすい幅にギュッと寄せる） */
         max-width: 600px; 
         /* スマホで見た時の端っこの余白 */
@@ -270,10 +270,14 @@ button[type=submit] {
     }
 
     h1 { 
-        font-size: 1.3em; 
-        text-align: center; 
-        margin-bottom: 60px; 
-        color: #555; 
+    text-align: center;    /* これが「真ん中に寄せろ」という命令です */
+    font-size: 1.4em;      /* 文字の大きさ（お好みで） */
+    margin-top: 40px;      /* 上の余白 */
+    margin-bottom: 60px;   /* 下の余白（本文との間隔） */
+    color: #555;           /* 文字の色 */
+    font-weight: normal;   /* 太字にしたくない場合はこれを入れる */
+}
+
     }
 
     .navigation { 
