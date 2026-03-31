@@ -235,29 +235,45 @@ textarea {
 </head>
 <body>
 
-    <h1>サイト名（仮）</h1>
-    
-    <nav>
-        <a href="#about">About</a>
-        <a href="#main">Main</a>
-    </nav>
-
-    <div class="content">
-        <section id="about">
-            <h2>About</h2>
-            <p>ここは壁打ち・ログ置き場です。二次創作を含みます。</p>
-        </section>
-
-        <hr>
-
-        <section id="main">
-            <h2>Main</h2>
-            <p>作品一覧をここに書いていきます。</p>
+   <div class="wrap">
+    <header>
+        <div class="headerBox">
+        </div>
+        <h1>草枕</h1>
+        <nav>
             <ul>
-                <li>作品タイトル1（準備中）</li>
-            </ul>
+             <li><font size="1.5" >2026.03.20 - </font>(<a href="https://erla.jp/#id#/novel/83553/">MAIN CONTENTS</a>) </ul></nav> <main>
+ <section><br>
+<h3>ATTENTION</h3>
+            <dl><br>
+            ここは個人的な妄想(夢小説)を吐き出すためだけの壁打ちサイトです。交流を目的としておりません。掲載しているお話は二次創作であり、版権元とは一切関わりございません。文章の持ち出し、他所への転記は堅く禁じます。また、内容への苦情、過度な要望にはお応えいたしかねます。
+            </dl><br>
+          <h3>ABOUT HERE  </h3><br>
+            <ul>【管理人】Ryo(成人済♀)<br>
+【サイト】草枕(検索避け済み)<br>
+【ＵＲＬ】https://erla.jp/359/<br>
+【リンク】ご自由にどうぞ。報告不要。<br>
+【メール】何かあれば波箱にお願いします(<a href="https://wavebox.me/wave/4bqep61lv02c4voc/">wave box)</a><li></li><br>
+ランク/ランク/ランク
         </section>
-    </div>
-
+     
+    </main>
+</div>
+<!-- ここから下スムーススクロール -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('a[href^="#"]').click(function () {
+            var speed = 800;
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $('body,html').animate({
+                scrollTop: position
+            }, speed, 'swing');
+            return false;
+        });
+    });
+</script></header>
 </body>
 </html>
