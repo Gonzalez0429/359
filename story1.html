@@ -245,14 +245,52 @@ button[type=submit] {
 }
 .novel-text { white-space: pre-wrap; margin-top: 30px; } /* 改行をそのまま表示する設定 */
         .back-link { margin-top: 50px; text-align: center; }
- 
+ <style>
+    body {
+        /* 1. 上下左右にたっぷり余白（上下50px、左右は自動で真ん中寄せ） */
+        margin: 50px auto; 
+        /* 2. 画面の幅を制限（読みやすい幅にギュッと寄せる） */
+        max-width: 600px; 
+        /* スマホで見た時の端っこの余白 */
+        padding: 0 25px; 
+        /* 行の間隔を広げてゆったりさせる */
+        line-height: 2; 
+        color: #333; 
+        background-color: #fdfdfd; 
+    }
+
+    .novel-body { 
+        /* 3. 自動改行（メモ帳の改行をそのまま反映） */
+        white-space: pre-wrap; 
+        /* 4. 文末の右側を綺麗に揃える（両端揃え） */
+        text-align: justify; 
+        /* 文字の間隔を少しだけ広げる（読みやすさUP） */
+        letter-spacing: 0.05em; 
+        font-size: 1.05em;
+    }
+
+    h1 { 
+        font-size: 1.3em; 
+        text-align: center; 
+        margin-bottom: 60px; 
+        color: #555; 
+    }
+
+    .navigation { 
+        margin-top: 100px; 
+        text-align: center; 
+        font-size: 0.9em;
+    }
+    .navigation a { text-decoration: none; color: #888; }
+</style>
+
     </style>
 </head>
 <body>
 
     <h1>いろはうた(壱)</h1>
 
-    <div class="novel-text">
+    <div class="novel-body">
 曹魏の最前線を守る将、満寵の執務室は、およそ一国の重鎮が住まう場所とは思えない惨状を呈していた。床には墨の滲んだ設計図が幾重にも重なり、その隙間を埋めるように精巧な歯車や、用途不明の木片が散乱している。その混沌の主は、墨と木と古紙が混ざり合う独特な香りの中、膝をついて床に這いつくばり、熱心に何かを指でなぞっていた。白と青を基調とした長い羽織の裾に埃が被っているが、本人は一向に気にする様子もない。
 
 「……満寵殿。また釦、掛け違えていますよ」
