@@ -3,54 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品タイトル｜サイト名</title>
+    
     <style>
-        /* 小説を読みやすくする専用CSS */
-        body { 
-            font-family: "Hiragino Mincho ProN", "MS Mincho", serif; /* 明朝体 */
-            line-height: 2; /* 行間を広くして読みやすく */
-            color: #333; 
-            max-width: 550px; 
-            margin: 50px auto; 
-            padding: 0 25px; 
-            background-color: #fdfdfd; 
-            word-wrap: break-word;
-        }
-        h1 { font-size: 1.4em; text-align: center; margin-bottom: 50px; color: #555; }
-        
-        /* 本文エリア：改行をそのまま反映させる魔法の命令 */
-        .novel-body { 
-            white-space: pre-wrap; 
-            font-size: 1.05em;
-            letter-spacing: 0.05em; /* 文字の間隔を少し広げる */
-        }
+     @charset "UTF-8";
 
-        .navigation { 
-            margin-top: 80px; 
-            text-align: center; 
-            border-top: 1px solid #eee; 
-            padding-top: 20px; 
-        }
-        .navigation a { text-decoration: none; color: #888; font-size: 0.9em; }
+/* ウェブフォントの読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Shippori+Mincho&family=Yuji+Syuku&display=swap');
+
+/* 全体に適用する */
+* {
+    margin: 6;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+/* 共通 */
+:root {
+    --white: #fff;
+    --dark-color: #3f4660;
+    --color: #55618d;
+    --ja-font: 'Yuji Syuku', serif;
+}
+
+/* 基本設定 */
+body {
+    background: var(--white);
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    text-align: left;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 12px;
+    color: var(--dark-color);
+}
+
+/* 背景画像 */
+body::before {
+    position: fixed;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+/* リンク */
+a {
+    color: var(--color);
+}
+
+header {
+    margin-top: 80vh;
+    margin-top: 80svh;
+    margin-bottom: 10vh;
+}
+
+header h1 {
+    background: url('https://erla.jp/storage/official/VUMvXM7urC6xFVLugPqEb8RRURB8fvsh3Q9gm87W.jpg') center/cover;
+    -webkit-background-clip: text;
+    font-size: 3.2em;
+    font-family: var(--ja-font);
+    color: transparent;
+}
+
+/* セクション */
+section {
+    padding: 3em 0%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: FadeIn 1s;
+}
+
+section aside {
+    max-width: 600px;
+}
+
+section aside,
+section aside p {
+    margin-bottom: 1.5em;
+}
+
+/* リスト系 */
+section ul,
+section ol {
+    margin-bottom: 1em;
+}
+
+section ul {
+    margin-left: 1em;
+    padding-left: 1em;
+    list-style-type: none;
+   
+}
+
+section ul.yoko li {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+section ol {
+    margin-left: 0.7em;
+    list-style-position: inside;
+}
+
+/* アーティクル */
+article {
+text-align: justify;
+    margin: 0 auto;
+    padding: 3em 2em;
+    max-width: 900px;
+    background-color: var(--white);
+}
+
+/* アーティクル見出し */
+article h1 {
+    font-size: 1.25rem;   
+    margin-bottom: 1.5em; 
+    text-align: center;
+    letter-spacing: 0.1em; 
+    line-height: 1.4;     
+}
+
+
+/* メニュー */
+.menu {
+    text-align: center;
+    margin: 1em auto 1.5em;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* アニメーション */
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* フォーム系 */
+textarea,
+input[type],
+button {
+    padding: 0 0.5em;
+    height: 30px;
+    background: var(--white);
+    border: none;
+    border: 1px dotted  var(--dark-color);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--dark-color);
+}
+
+textarea {
+    width: 200px;
+    height: 70px;
+}
+
+input[type=text] {
+    width: 80px;
+}
+
+button[type=submit] {
+    width: auto;
+}
+
+/* 横幅768px以上で読み込む */
+@media screen and (min-width:768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 4em;
+    }
+
+    /* フレックスボックス */
+    #boxWrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .box {
+        flex-basis: 40%;
+    }
+}
+
+/* 横幅1024px以上で読み込む */
+@media screen and (min-width:1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    header h1 {
+        font-size: 5em;
+    }
+}
+
+/* 横幅1440px以上で読み込む */
+@media screen and (min-width:1440px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 6em;
+    }
+
+    .box {
+        flex-basis: 30%;
+    }
+}
+/* 囲った中にある「すべての要素」の背景と枠をリセットする */
+.kusamakura-iine-box * {
+    background-color: transparent !important;
+    color: var(--dark-color) !important;
+    border: none !important;
+}
+
+/* その上で、一番大きな要素にだけ枠をつける */
+.kusamakura-iine-box {
+    display: inline-block;
+    border: 0px dotted var(--dark-color);
+    padding: 5px 15px;
+}
+
     </style>
 </head>
 <body>
 
-    <h1>作品タイトル</h1>
+    <h1>いろはうた(壱)</h1>
 
     <div class="novel-body">
-ここに本文を書いていきます。
-スマホで打った「改行」がそのまま反映されるので、
-HTMLタグをいちいち入れなくて大丈夫です。
+曹魏の最前線を守る将、満寵の執務室は、およそ一国の重鎮が住まう場所とは思えない惨状を呈していた。床には墨の滲んだ設計図が幾重にも重なり、その隙間を埋めるように精巧な歯車や、用途不明の木片が散乱している。その混沌の主は、墨と木と古紙が混ざり合う独特な香りの中、膝をついて床に這いつくばり、熱心に何かを指でなぞっていた。白と青を基調とした長い羽織の裾に埃が被っているが、本人は一向に気にする様子もない。
 
-「――っ、待って！」
+「……満寵殿。また釦、掛け違えていますよ」
 
-あの日、僕が伝えたかった言葉は……。
-（ここに続きをペースト！）
+部屋の隅、唯一片付けられた机で筆を走らせていた記録官の#name#は、呆れ混じりの溜息とともに指摘した。満寵は彼女の声に顔を上げると、整った顔立ちにへらりと締まりのない笑みを浮かべる。
+
+「おや、本当だ。いけないね、#name#殿に指摘されるまで全く気づかなかったよ」
+
+はだけた胸元から文官らしからぬ厚みのある胸板が覗いていて、戦場に立つ武官としての逞しさが、そのだらしない着こなしから不意にこぼれ落ちる。己の無頓着さなど微塵も気に留めない彼の様子に#name#は毒気を抜かれ、視線を強引に手元の記録帳へと戻した。
+
+「身なりを整える時間があるなら、一つでも多く罠を仕掛けたい。……それが私の本音だけど、君に嫌われるのは困るからね。あとで直しておくよ」
+
+満寵は飄々とした口調で言いながら、手元の木札を弄んだ。
+
+今日の彼は、朝から様子がおかしい。いつもなら、早朝から新兵器の構想に耽っているはずの男が、今はただの「文字」を見つめているのだ。和やかな目元を、聡く細めながら。
+
+「ところで、#name#殿。君は『いろは歌』をどう思う？」
+「……唐突ですね。まあ、教養として知ってはいますが。それが何か？」
+「いやあ。何ってことでもないけど、実は今朝、私の机にこんなものが置かれていてね」
+
+満寵が差し出したのは、一枚の古びた木札だった。所々に小さな穴が空いていたり、細かい亀裂が入っていたり。しかし、その木札には力強い墨跡で、ただ一文字――『い』と記されている。木の古さを感じさせない、堂々とした筆跡だ。
+
+「でもこれだけじゃない。昨日から城内のあちこちで、この札が見つかっているんだ。まるで、私を特定の場所へ誘い出そうとする『道標』のようにね」
+
+穏やかだった彼の瞳が、一瞬だけ鋭い「捕食者」のそれに変わった。部屋の外から、廊下を行き交う兵士や部下、仲間の足音が聞こえる。皆が本格的に活動し始める時刻の間際。忙しない雑音に揉まれながら、満寵はただ静かに#name#の瞳を真っ直ぐ見詰めた。
+
+「#name#殿、悪いけど今日の記録は予定を変更しよう。この札がどこまで続くのか……この『罠』の招待席まで付き合ってくれるかい？」
+
+満寵は立ち上がり、はだけた胸元を直すこともせず、#name#の手首をぎゅっと握りしめた。凪のように落ち着いた声色の奥に、確固たる意志が見える。返事の余地を与える問いをぶつけておきながら、彼の手は拒絶を許さぬ強さで彼女を掴んでいた。
+
+
+薄い雲が棚引く空の下。二人が向かったのは、城の北西に位置する古い兵糧庫だった。そこは数年前の大火で焼け落ち、今は満寵が「実験場」として管理している場所だ。凡人には到底理解できない罠の試作や、作りかけで投げ出された謎の物体。それらが幾つも転がっている、彼にとっては遊び場のような空間だった。そんな埃っぽい空気の中、案内されるように落ちていた木札は、いつの間にか『ろ』『は』『に』……と、いろは歌の順に並んでいる。
+
+「……十七、十八。ちょうど『ね』まで揃ったね」
+
+満寵は楽しげに鼻歌を交えながら、焼け焦げた柱の陰から新たな札を拾い上げる。しかし、その足が止まったのは、兵糧庫の最奥にある隠し扉の前だった。そこは満寵自身が設計した、外部からは決して見えるはずのない「秘密の通路」だ。そして、扉の取っ手に赤い紐で括り付けられた、十九枚目の札。そこには、『な』の一文字が記されていた。
+
+「……な？」
+
+#name#が横から覗き込んで呟いたその瞬間、満寵の顔から笑みが消失した。彼は無造作にその札を剥ぎ取ると、裏面に書かれた細かな文字を凝視する。――『咎無くて死す』。その文字を見た途端、満寵の喉の奥から、聞いた事もないほど低く、愉悦に満ちた笑いが漏れた。
+
+「#name#殿。これは傑作だ。この文字の運び、そしてこの挑発的な引用……。蜀の軍師殿は、私の好みを実によく理解していらっしゃる」
+「蜀の……？ 満寵殿、これは敵の仕業なのですか？」
+「ああ。おそらくは諸葛亮殿か、あるいはその息がかかった者だろうね。私の過去をほじくり返し、あえてこの城の『欠陥』を突いてきた。……法という名の完璧な罠に、一滴の泥を混ぜるような真似を」
+
+満寵は扉を開き、暗い通路へと#name#を促した。その目は、もはや明るく穏やかな上司のものではない。
+
+「この奥には、二十枚目の札があるはずだ。そしてその先に、私がかつて『法』によって裁いた男の影が待っている。……怖いかい？#name#殿」
+
+通路は狭く、二人の肩が触れ合うほどだった。満寵は#name#の震える指先に気づくと、ふっと表情を和らげ、掛け違えたままの胸元へ彼女の手を導く。
+
+「大丈夫さ。君が隣で記録を続けてくれる限り、私は踏み外さない。……もし私が法を忘れて獣になりそうになったら、その時は君が私を裁いてくれ」
+
+外の光が十分に差し込まない暗闇の中、彼の体温だけが熱を帯びて#name#に伝わる。彼女の手に届く心音は、昂ることもなく冷静に拍動していた。
+
+「さあ、この難題の究明を続けようか。いろは四十七文字がすべて揃った時、誰が『咎無き者』として死ぬことになるのか……。私が設計したこの城で、真実の照合といこう」
+
+満寵は#name#の耳元で密やかに囁くと、一歩、更に光の届かぬ奥底へと踏み出した。
+　
     </div>
 
     <div class="navigation">
-        <a href="novel_index.html">Index（目次）に戻る</a>
+        
     </div>
 
 </body>
