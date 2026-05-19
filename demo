@@ -1,0 +1,335 @@
+<meta charset="UTF-8"><!-- 文字コードの指定 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana"><!-- GoogleFonts -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"><!-- Font Awesome -->
+<style type="text/css" media="screen">
+  
+/* フォントのライセンス表記 */
+/*
+This distribution contains content that is licensed under the Open Font License.
+
+You can download the original contents from here.
+
+'Italiana'
+https://fonts.google.com/specimen/Italiana
+'icons'
+https://fontawesome.com/icons/gem
+*/
+
+/* リセットCSS */
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:bolder}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+
+/*　　PC、モバイル共通CSS　　*/
+
+/* 共通設定 */
+
+html {
+ background: transparent;
+ font-size: 58%;
+}
+body {
+ font-family: 'メイリオ', 'ヒラギノ角ゴ', sans-serif;
+ letter-spacing: 0.2em;
+ line-height: 180%;
+}
+
+/* その他の設定 */
+.right {
+ text-align: right;
+}
+</style>
+<style type="text/css" media="screen and (min-width:800px)">
+/*　　PC用CSS　　*/
+
+/* 共通設定 */
+body {
+ font-size: 1.3rem;
+}
+a {
+ background: #ededed;
+ color: #000000;
+ text-decoration: none;
+ transition: 0.7s;
+}
+a:hover {
+ background: #d7eceb;
+}
+h1 {
+ padding: 0.5em 0em;
+ font-family: 'Italiana', serif;
+ font-size: 4rem;
+ text-align: center;
+}
+h2 {
+ display: inline-block;
+ padding: 0em 1em;
+ margin: 0.5em 0em;
+ border-bottom: solid 2px #cccccc;
+ font-family: 'Italiana', serif;
+ font-size: 1.3em;
+}
+h3 {
+ margin: 0.5em 0em 0.5em 1em;
+ color: #555555;
+}
+em {
+ color: #888888;
+}
+ol,ul,dl {
+ list-style: none;
+}
+input,textarea,select,button {
+ border: solid 1px #cccccc;
+ font-family: inherit;
+ font-size: 100%;
+}
+
+/* 段落設定 */
+
+p {
+ padding: 0em 1em;
+}
+section {
+ margin: 2em 0em;
+}
+
+/* メインコンテンツ設定 */
+
+main {
+ display: block;
+ margin: 5rem auto;
+  width: 50%;
+  min-width: 600px;
+}
+
+/* 小説設定 */
+
+.novel {
+ text-align: center;
+}
+.novel a {
+ padding: 0em 0.5em;
+}
+.novel a:hover {
+ background: #cfcfcf;
+}
+.novel ul {
+ padding: 2em 0em;
+}
+.novel li {
+ display: flex;
+  align-items: center;
+ padding: 2em 0em;
+ box-sizing: border-box;
+}
+.novel li div {
+ padding: 1em;
+ width: 100%;
+}
+.novel li i {
+ display: inline-block;
+ padding: 0rem;
+ font-size: 20.0rem;
+}
+.novel li h3 {
+ padding: 0.5em 0em;
+ font-family: 'Italiana', serif;
+ font-size: 2.0rem;
+}
+.novel h3 span {
+ padding: 0em 1em;
+ color: #000000;
+ font-size: 0.6em;
+ font-weight: normal;
+}
+.novel p {
+ color: #444444;
+ text-align: left;
+}
+</style>
+<style type="text/css" media="screen and (max-width:799.999px)">
+/*　　モバイル用CSS　　*/
+
+/* 共通設定 */
+
+body {
+ font-size: 1.2rem;
+}
+a {
+ background: #ededed;
+ color: #000000;
+ text-decoration: none;
+ transition: 0.7s;
+}
+a:hover {
+ background: #d7eceb;
+}
+h1 {
+ padding: 0.5em 0em;
+ font-family: 'Italiana', serif;
+ font-size: 4rem;
+ text-align: center;
+}
+h2 {
+ display: inline-block;
+ padding: 0em 1em;
+ margin: 0.5em 0em;
+ border-bottom: solid 2px #cccccc;
+ font-family: 'Italiana', serif;
+}
+h3 {
+ margin: 0.5em 0em 0.5em 1em;
+}
+em {
+ color: #999999;
+}
+ol,ul,dl {
+ list-style: none;
+}
+input,textarea,select,button {
+ border: solid 1px #cccccc;
+ font-family: inherit;
+ font-size: 100%;
+}
+textarea {
+ padding: 0.2em;
+ width: 90%;
+}
+
+/* 段落設定 */
+
+p {
+ padding: 0em 1em;
+}
+section {
+ margin: 2em 0em;
+}
+
+/* メインコンテンツ設定 */
+
+main {
+ display: block;
+ margin: 2rem auto 5rem;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* 小説設定 */
+
+.novel {
+ width: 90%;
+ max-width: 500px;
+ text-align: center;
+}
+.novel a {
+ padding: 0em 0.2em;
+}
+.novel a:hover {
+ background: #cfcfcf;
+}
+.novel ul {
+ padding: 2em 0em;
+}
+.novel li {
+ display: flex;
+  align-items: center;
+ padding: 1em;
+}
+.novel li i {
+ padding: 0rem;
+ font-size: 8.0rem;
+}
+.novel li div {
+ width: 100%;
+}
+.novel li h3 {
+ display: block;
+ padding: 0em 0.5em;
+ margin: 0em;
+ font-family: 'Italiana', serif;
+ font-size: 1.2rem;
+ text-align: center;
+}
+.novel h3 span {
+ padding: 0em 1em;
+ color: #000000;
+ font-size: 1rem;
+ font-weight: normal;
+}
+.novel p {
+ padding: 0.5em 1em;
+ color: #444444;
+ text-align: center;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div style="background:#fff; padding:20px; border:0px dashed #fff; margin-bottom:10px; text-align:center;">
+　　 <p style="font-size:0.8em; margin-bottom:10px;"></p>
+    <input type="text" id="userName" placeholder="ナマエ" style="padding:8px; width:80px; height: 20px;">
+    <button onclick="saveName()" style="padding:5px5px;">決定</button>
+</div>
+
+<script>
+    // 入力された名前をブラウザに保存する魔法
+    function saveName() {
+        const name = document.getElementById('userName').value;
+        if(name) {
+            localStorage.setItem('dreamName', name);
+            alert('名前を「' + name + '」に設定しました。');
+        }
+    }
+    // ページを開いた時に、もし保存された名前があれば表示する
+    window.onload = function() {
+        const savedName = localStorage.setItem('dreamName');
+        if(savedName) document.getElementById('userName').value = savedName;
+    }
+</script>
+<main class="novel">
+<ul>
+<li><div><h3>［完結］いろはうた<span>満寵</span></h3>
+<p>いろは47文字の符号と満寵の過去(全5話)<br>
+甘さあり/シリアス/記録管夢主  
+</p><a href="いろはうた/story1.html">(壱)遊戯</a><a href="いろはうた/story2.html">(弐)回顧</a><a href="いろはうた/story3.html">(参)絵図</a><a href="いろはうた/story4.html">(肆)判決</a><a href="いろはうた/story5.html">(伍)御心</a></div>
+</li><br>
+<li><div><h3>［連載中］魔窟浪漫奇譚<span>満寵</span></h3>
+<p>13人の魑魅魍魎と囲い込みセールスマン(全30話)<br>現パロ/群像/シュールラブコメ/一般夢主</p><a href="魔窟浪漫譚/story12.html">設定・登場人物</a><br>
+<a href="魔窟浪漫譚/story13.html">1.薄壁を穿つ、美声の二重奏</a><a href="魔窟浪漫譚/story15.html">2.天井を揺らす、奇才の設計図</a><br><a href="魔窟浪漫譚/story17.html">3.策士の看破、ハッタリの武装</a><a href="魔窟浪漫譚/story18.html">4.深夜のサバンナ、斑馬の純情</a><br><a href="魔窟浪漫譚/story21.html">5.朝の踊り場、千手観音と牛乳</a><a href="魔窟浪漫譚/story22.html">6.確定演出、ダブルソフトの旋風</a><br><a href="魔窟浪漫譚/story23.html">7.鉄輪と馬面、そして築城プロット</a><a href="魔窟浪漫譚/story25.html">8.路上の包囲網、烈火の双剣</a><br><a href="魔窟浪漫譚/story26.html">9.素顔を覆い隠す、ムスクの鉄壁</a></div>
+</li><br>
+<li>
+<div><h3>［連載中］極悪非道の天秤<span>徐庶</span></h3>
+<p>11人の男たちによる地獄の椅子取りゲーム(全15話)<br>現パロ/ダーク/頭脳コンゲーム✕サイバーサスペンス</p></div>
+</li><br>
+<li>
+<div><h3>劇薬の共同戦線<span>法正</span></h3>
+<p>法正と諸葛亮が協力して事件の真相を追う(全25話)<br>サスペンス/ミステリ/間者夢主 ※法正がかなり劇薬</p></div>
+</li><br>
+<li>
+<div><h3>マイ・ディア・エグゼクティブ<span>魯粛</span></h3>
+<p>大企業のイケオジと社会人三年目の一般人(全15話)<br>現パロ/ラブコメ/年の差/カフェ店員夢主</div>
+</li><br>
+  <div style="text-align:center; margin: 50px;">
+    <a href="https://wavebox.me/wave/4bqep61lv02c4voc/"
+        display: inline-block;
+        text-decoration: none;
+        color: #55618d;
+        border: 1px solid #55618d;
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-size: 0.6em;
+        background: white;
+    ">
+        波箱
+    </a>
+    <p style="font-size: 0.7em; color: #999; margin-top: 10px;" >
+</p>
+</ul>
+</main>
