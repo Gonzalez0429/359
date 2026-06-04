@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    
+    <style>
+        /* 全体の基本設定 */
+        body { 
+            background-color: #fff; /* 背景はごく薄いグレー */
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center; /* 左右中央に配置 */
+        }
+
+        /* 本文が入る箱（ここで余白と幅をコントロール） */
+        .container { 
+            width: 85%;            /* スマホでの基本幅 */
+            max-width: 500px;      /* 左右余白を多めにするために幅を少し狭めに設定 */
+            margin: 60px 0;        /* 上下の余白 */
+            color: #2d3241;        /* 指定の文字色 */
+            
+            /* 書体を游明朝に（入っていない端末用に予備も指定） */
+             font-family: "IPAゴシック", "Noto Sans CJK JP", "ヒラギノ角ゴ ProN", serif;
+            font-size: 0.7em;      /* 文字サイズを少し小さめに */
+            line-height: 1.7;      /* 行間をゆったりと */
+        }
+
+        /* タイトルの設定 */
+        h1 { 
+            text-align: center;    /* 真ん中寄せ */
+            font-size: 1.4em;      /* タイトルも控えめなサイズに */
+            margin-bottom: 30px;   /* 本文との間隔 */
+            font-weight: normal; 
+        }
+
+        /* 本文の設定 */
+        .novel-text { 
+            white-space: pre-wrap; /* 自動改行（メモ帳の改行を反映） */
+            text-align: justify;   /* 文末を綺麗に揃える */
+            word-wrap: break-word; /* 長い単語でもはみ出さない */
+            letter-spacing: 0.03em; /* 文字間を少し広げて読みやすく */
+        }
+
+        /* 戻るリンク */
+        .nav { 
+            margin-top: 100px; 
+            text-align: center; 
+        }
+        .nav a { 
+            text-decoration: none; 
+            color: #888; 
+            font-size: 1.4em;
+        }
+    </style>
+</head>
+<body>
+ <script src="//accaii.com/utakata/script.js" async></script><noscript><img src="//accaii.com/utakata/script?guid=on"></noscript>   
+    <div class="container">
+    <h1>《ご案内》</h1>
+このお話は裏社会で暗躍するプレイヤー11人による、コンゲームの裏社会現代パロです。陣営に関係なくタッグを組んで極悪非道な頭脳戦を繰り広げる、コンゲームとサイバーサスペンスのハイブリッド。騙し合いが主軸なので、全員が腹黒いです。notハピエン。メリバ傾向。
+<br><br>
+
+□ プレイヤー組み合わせ □<br>
+<br>
+・郭嘉✕姜維<br>
+└郭嘉(外資系)/姜維(FP)...外資系用語のカタカナ無双とリクス管理&金融のプロ。<br>
+・満寵✕法正<br>
+└満寵(エンジニア)/法正(債権回収)...隙のないハッキングと完璧な連携プレー。<br>
+・曹休✕曹丕<br>
+└曹休(銀行員)/曹丕(裁判官)...誠実で狂信的な表機関と冷酷なジャッジメント。<br>
+・魯粛✕龐統<br>
+└魯粛(広告代理店)/龐統(実演販売士)...盤面外から全ての横取りを狙う第三勢力。<br>
+<br>
+・荀彧(塾講師)...洗脳と社会的抹殺という名の必殺技で外堀を埋めて捻じ伏せる。<br>
+・劉備(ジャーナリスト)...泥臭い正義で首を突っ込むが正義は首を絞める諸刃の剣。<br>
+・徐庶(リモートワーカー)...公的権力を盾にしてプレイヤーを追い返す謎の一般人。<br>
+・夢主...重要なデータを持つ手駒としてプレイヤーに狙われる巻き込まれ主人公。<br>
+    </div>
+   </div>
+</div>
+<script>
+    window.onload = function() {
+        // 保存されている名前を呼び出す
+        let savedName = localStorage.getItem('dreamName');
+        
+        // もし名前が空っぽなら、デフォルトの名前（例：名無し）にする
+        if (!savedName) {
+            savedName = "ナマエ";
+        }
+
+        // ページ内の「〇〇」をすべて保存された名前に置き換える
+        const bodyText = document.querySelector('.novel-text');
+        if (bodyText) {
+            bodyText.innerHTML = bodyText.innerHTML.replace(/#name#/g, savedName);
+        }
+    }
+</script> 
+</body>
+</html>
+
