@@ -1,0 +1,215 @@
+<style>
+@charset "UTF-8";
+
+/* Template & Designed by Towako. */
+/* https://ninawas.me */
+
+/* ウェブフォントの読み込み */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+@font-face {
+    font-family: 'はんなり明朝';
+    font-display: swap;
+    src: url('https://cdn.leafscape.be/hannari/hannari_web.woff2') format("woff2");
+}
+
+/*-------------------------------------------------
+このフォントはIPAフォントライセンスv1.0の下で提供されています。
+http://ipafont.ipa.go.jp/ipa_font_license_v1.html
+-------------------------------------------------*/
+
+/* 全体に適用する */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* リンク */
+a {
+    text-decoration: none;
+    border-bottom: 2px solid #b8ced1;
+    color: #292929;
+}
+
+/* 基本設定 */
+body {
+    text-align: justify;
+    word-break: break-all;
+    background-color: #fff;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    color: #111111;
+}
+
+/* コンテナサイズ */
+header,
+section,
+article,
+footer {
+    margin: 3em auto;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* 見出し */
+header h1 {
+    margin: 3em auto 0;
+}
+
+/* フォントの指定 */
+header h1 span,
+article h2 {
+    font-family: 'はんなり明朝', 'Noto Serif JP', serif;
+}
+
+/* ヘッダー段落フェードイン */
+header p {
+    animation: FadeIn .5s;
+    color: #a0a0a0;
+}
+
+/* リスト系 */
+section ol {
+    margin: 2em auto 1.5em 0.5em;
+    list-style-type: decimal-leading-zero;
+}
+
+section ol li:nth-of-type(odd) a {
+    border-bottom: 3px solid #bcb8fc;
+}
+
+section ol li:nth-of-type(even) a {
+    border-bottom: 3px solid #cebbfc;
+}
+
+/* フッター  */
+footer p {
+    color: #a0a0a0;
+}
+
+/* 段落 */
+p {
+    margin: 1em auto 1.5em;
+}
+
+/* メニュー */
+.menu {
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    margin: 0 1em;
+}
+
+/* 中央寄せ */
+.center {
+    text-align: center;
+}
+
+/* フォーム系 */
+textarea,
+input[type] {
+    -webkit-appearance: none;
+    padding: 0.2em 0.5em;
+    background-color: #fff;
+    border: thin solid #bcb8fc;
+    border-radius: 0;
+}
+
+textarea {
+    width: 280px;
+    height: 150px;
+}
+
+input[type=text] {
+    width: 80px;
+}
+
+input[type=submit] {
+    width: auto;
+}
+
+/* アニメーション */
+@keyframes FadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+</style>
+
+<header>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <div style="background:#fff; padding:30px; border:0px dashed #fff; margin-bottom:10px; text-align:center;"><p style="font-size:0.8em; margin-bottom:10px;"></p>
+    <input type="text" id="userName" placeholder="ナマエ" style="padding:8px; width:80px; height: 23px;">
+    <button onclick="saveName()" style="padding:5px5px;">決定</button>
+</div>
+<script>
+    // 入力された名前をブラウザに保存する魔法
+    function saveName() {
+        const name = document.getElementById('userName').value;
+        if(name) {
+            localStorage.setItem('dreamName', name);
+            alert('名前を「' + name + '」に設定しました。');
+        }
+    }
+    // ページを開いた時に、もし保存された名前があれば表示する
+    window.onload = function() {
+        const savedName = localStorage.setItem('dreamName');
+        if(savedName) document.getElementById('userName').value = savedName;
+    }
+</script>
+  <script src="//accaii.com/utakata/script.js" async></script><noscript><img src="//accaii.com/utakata/script?guid=on"></noscript>  
+</header>
+<section><center>◆<b> <a href="demo.html">中編・長編</a> <font size= "1.5">(完結2/連載中1)</font></font><span></li>
+        <br>   <br>
+        <font size= "1.2"> (↑古↓新)<br><font color= "#ff7f50">*</font><font color= "#808080">官能描写あり。鍵なしのため閲覧は自己責任</font></font></p></center>
+    <ol><pre>
+［満寵］<a href="story6.html">日溜まりの絡繰箱</a>      ［徐庶］<a href="story24.html">隠れ処の猛獣</a> 
+［徐庶］<a href="story7.html">空を喰む心臓</a>            ［魯粛］<a href="story29.html">摩天楼の兵站</a> 
+［馬岱］<a href="story8.html">沈黙を切り裂く断頭台</a>［鍾会］<a href="story33.html">踏み台に沈む英才</a> 
+［満寵］<a href="story9.html">欲望の特効薬</a>            ［荀彧］<a href="story38.html">白衾を捲る王佐の指先</a><font color= "#ff7f50">*</font> 
+［法正］<a href="story10.html">月夜に溶ける劇薬</a>      ［満寵］<a href="story54.html">箱入り娘</a> 
+［姜維］<a href="story11.html">麒麟の懐に微睡の猫</a> 
+［満寵］<a href="story14.html">法則を超える引力</a> 
+［曹休］<a href="story16.html">千里の駒と甘い手綱</a> 
+［郭嘉］<a href="story19.html">悪魔の渇望</a> 
+［荀攸］<a href="story20.html">終わらぬ夜の渇き</a> 
+            </ul></pre>
+    </ol>
+</section>
+<footer>
+<div style="text-align:center; margin: 50px;">
+    <a href="https://wavebox.me/wave/4bqep61lv02c4voc/"
+        display: inline-block;
+        text-decoration: none;
+        color: #55618d;
+        border: 1px solid #55618d;
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-size: 0.6em;
+        background: white;
+    ">
+        波箱
+    </a>
+    <p style="font-size: 0.7em; color: #999; margin-top: 10px;">
+     絵文字応援！
+        
+    </p>
+</div>
+         
+</footer>
+
