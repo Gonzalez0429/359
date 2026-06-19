@@ -1,307 +1,104 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta name="robots" content="noindex,nofollow">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>泡沫</title>
-    <style>
-@charset "UTF-8";
+<link href='https://fonts.googleapis.com/css?family=Julius Sans One' rel='stylesheet' type='text/css'>
 
-/* ウェブフォントの読み込み */
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP|Raleway&display=swap');
+<style type="text/css">
 
-/* 全体に適用する */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-weight: normal;
+body{
+	font-family: 'Julius Sans One',"メイリオ", sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 22px;
+	margin: 0;
+	padding: 0;
 }
 
-/* root */
-:root {
-    --color: #7d93b1;
-    --gray: #efefef;
-    --white: #ffffff;
-    --black: #333;
-   --red: #838383;
-    --en: 'Raleway', 'Noto Serif JP', serif;
+#wrapper{
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 10px 10px 10px;
 }
 
-/* 基本設定 */
-body {
-    background-color: var(--white);
-    text-align: left;
-    line-height: 1.7;
-    letter-spacing: 0.1em;
-    font-size: 11px;
-    font-family: 'Noto Serif JP', serif;
-    color: var(--black);
+.contents{
+	background:#e6eae3;
+	margin:10px 0px;
+	padding:10px 20px 20px;
+	position: relative;
+    text-align: justify;
 }
 
-/* リンク */
-a,
-a:visited {
-    color: var(--black);
-    transition: .5s all;
+.contents:before{
+	content: " ";
+	width: 0;
+	height: 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-color: #fff;
+	border-style: solid;
+	border-top-color: #4682b4;
+	border-width: 20px 20px 0 0;
 }
 
-a:hover,
-a:visited:hover {
-    color: var(--black);
+h1{
+	margin: 5px 0px 0px;
 }
 
-.wrap {
-    margin: 3em auto;
-    width: 80%;
+h2{
+	font-size: 15px;
+	padding: 0px 10px;
+	border-bottom: solid 1px #4682b4;
+	display:inline;
 }
 
-/* 横幅768px以上で読み込む */
-@media screen and (min-width: 768px) {
-    .wrap {
-        display: flex;
-        justify-content: space-between;
-        max-width: 800px;
-    }
-
-    header {
-        flex-basis: 250px;
-    }
-
-    main {
-        flex-basis: calc(100% - 280px);
-    }
+a{
+	color: #4682b4;
+	background: #e6eae3;
+	padding: 0 2px;
+	text-decoration: none;
 }
 
-header {
-    margin-bottom: 5em;
+a:hover{
+	color: #4682b4;
+	background: none;
 }
 
-.headerBox {
-    position: relative;
+input[type],textarea{
+	font-family: 'Julius Sans One',"メイリオ", sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 22px;
+	color: #000;
+	background: #e6eae3;
+	border: solid 1px #4682b4;
+	box-shadow: none;
+	margin: 0;
+	padding: 3px;
 }
 
-.headerBox img {
-    width: 100%;
-    height: auto;
+input[type=text]{
+	height: auto;
+	width: 170px;
 }
 
-.headerBox h1 {
-    position: absolute;
-    padding-top: 1em;
-    padding-right: 0.2em;
-    top: -20px;
-    left: 50%;
-    height: calc(100% + 40px);
-    line-height: 1;
-    transform: rotate(-20deg);
-    writing-mode: vertical-rl;
-    background-color: var(--white);
-    font-size: 1.3em;
-    color: var(--color);
+input[type=submit]{
+	height: auto;
+	margin: 1px 3px;
+	width: auto;
 }
-
-header>h1 {
-    font-size: 1.5em;
-    color: var(--red);
-}
-
-nav {
-    margin: 1.5em auto;
-}
-
-nav ul li {
-    margin: 0.5em 1em 0.5em auto;
-    padding-left: 0.5em;
-    display: inline-block;
-    border-left: 3px solid var(--color);
-
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 10px;
-    font-family: var(--en);
-    color: var(--color);
-}
-
-nav ul li a:visited {
-    color: var(--color);
-}
-
-section {
-    margin-bottom: 3em;
-}
-
-section h2 {
-    margin-bottom: 0.5em;
-    font-size: 1.5em;
-    font-family: var(--en);
-    color: var(--color);
-}
-
-section h3 {
-    position: relative;
-    margin-bottom: 1em;
-    font-family: var(--en);
-    font-size: 1.0em;
-}
-
-section h3::after {
-    position: absolute;
-    display: block;
-    content: '';
-    bottom: -0.5em;
-    left: 0;
-    width: 30px;
-    height: 1px;
-    background-color: var(--black);
-}
-
-section p {
-    margin: 1em auto;
-}
-
-section span {
-    font-weight: bold;
-}
-
-section mark {
-    background-color: var(--gray);
-}
-
-section strong {
-    font-weight: bold;
-    color: red;
-}
-
-section em {
-    border-bottom: thin dashed red;
-}
-
-section .link {
-    display: inline-block;
-    margin: 0.5em auto;
-    padding: 0 1em;
-    text-decoration: none;
-    border: thin solid var(--color);
-}
-
-section .link:hover {
-    background-color: var(--color);
-}
-
-section .en {
-    font-family: var(--en);
-}
-
-section dl {
-    margin: 1em auto;
-}
-
-section dd {
-    margin-bottom: 1em;
-    margin-left: 1em;
-}
-
-section ul {
-    list-style-type: none;
-}
-
-section time {
-    margin-right: 0.5em;
-    padding-right: 0.5em;
-    border-right: 5px solid var(--color);
-}
-
-.right {
-    text-align: right;
-}
-
-input[type=text],
-textarea {
-    padding: 0.2em;
-    border: thin solid var(--color);
-    color: var(--color);
-}
-
-input[type=text] {
-    min-width: 100px;
-}
-
-textarea {
-    width: 300px;
-    height: 100px;
-}
-/* シンプルに見せるためのほんの少しの装飾 */
-.text-accordion {
-  cursor: pointer;
-  margin-bottom: 1em;
-}
-
-/* 最初の一行（summary）の左側にあるデフォルトの三角矢印を消したい場合 */
-.text-accordion summary {
-  list-style: none; /* Chrome, Safari, Firefox用 */
-  outline: none;
-}
-.text-accordion summary::-webkit-details-marker {
-  display: none; /* 古いSafari用 */
-}
-
-/* ほんの少しだけ下に隙間をあけて読みやすく */
-.text-accordion p {
-  margin-top: 0.5em;
-  color: #555; /* 続きの文章を少しだけ薄い色にして馴染ませる（お好みで変更してください） */
-} 
-    </style> 
-</head>
-<body>
+</style>
    <script src="//accaii.com/utakata/script.js" async></script><noscript><img src="//accaii.com/utakata/script?guid=on"></noscript> 
-   <div class="wrap">
-    <header>
-        <div class="headerBox">
-        </div>
-        <h1>泡沫</h1>
-        <nav>
-            <ul>
-             <li><font size="1.5" ><p style="font-weight: bold;">
-2026.06.17-短編(郭嘉)： <a href="main.html">Product</a><br><details><summary>WaveBoxお返事(06/17)</summary><p>ハナさん、WaveBoxへのコメントありがとうございました！前回のご要望を検討し、簡易的ですが『お題箱』という形でリクエストを受け付けるように致しました。ぜひご活用ください！</p>
-</details>・受付中→<a href="https://odaibako.net/u/utakata">お題箱</a></font></ul> <main></nav>
- <section><br>
-<h3>ATTENTION</h3>
-            <dl><br>
-            ここは管理人の個人的な妄想を吐き出す夢小説サイトです。サイト内に掲載しているお話はすべて二次創作であり、版権元とは一切関わりございません。文章の持ち出し、他所への転記は堅く禁じます。また、内容への苦情、過度な要望にはお応えいたしかねます。最低限のマナーを守った上でお楽しみください。
-            </dl><br>
-          <h3>ABOUT HERE  </h3><br>
-            <ul>【管理人】Ryo(成人済♀/軍師が好き)<br>
-【サイト】泡沫(検索避け済み)<br>
-【ＵＲＬ】https://gonzalez0429.github.io/359/<br>
-【リンク】ご自由にどうぞ。報告不要。<br>
-【ご連絡】何かあれば波箱にお願いします(<a href="https://wavebox.me/wave/4bqep61lv02c4voc/">wave box)</a><li></li>
-<br>※作品について※<br>
-ギャグ/ラブコメ/シリアス/ダーク/ほのぼの/甘め/現パロ/ミステリ/バッドエンド(メリバ)等。なんでも許せる人向け。<br>
-<br><a href="http://01s.rknt.jp/entry.php?in_id=utakata&id=babyb0y&guid=on">孵化</a>/<a href="https://compslink.jp">COMPASS LINK</a>/<a href="http://minor-ds.com/search/rank.cgi?mode=r_link&id=16056">MDS</a>/<a href="http://02s.rknt.jp/entry.php?id=359musou&in_id=0429&guid=on">いろは</a>/<a href="http://mrank.tv/u/in.php?guid=ON&id=souten&pid=0429">蒼天</a>/<a href="http://tougen.nightfall.jp/musou/">無双ゆめ</a>/<a href="https://mmnn.rankch.com/in.php?rid=utakata">マイナー</a>
 
-        </section>
-     
-    </main>
-</div>
-<!-- ここから下スムーススクロール -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-    $(function () {
-        $('a[href^="#"]').click(function () {
-            var speed = 800;
-            var href = $(this).attr("href");
-            var target = $(href == "#" || href == "" ? 'html' : href);
-            var position = target.offset().top;
-            $('body,html').animate({
-                scrollTop: position
-            }, speed, 'swing');
-            return false;
-        });
-    });
-</script></header>
-</body>
-</html>
+<div id="wrapper"><br>
+<div id="wrapper"><br>
+<h1>utakata</h1>2026.06.17-short+1
+<a href="main.html">Product</a> <a href="https://odaibako.net/u/utakata">FREE</a>
+<div class="contents"><h2>Information</h2>
+	<br><br><details><summary>WaveBox RES(06/17)</summary><p>ハナさん、WaveBoxへのコメントありがとうございました！前回のご要望を検討し、簡易的ですが『お題箱』という形でリクエストを受け付けるように致しました。ぜひご活用ください！</p>
+</details><details><summary>guidance</summary><p> ここは個人の夢小説サイトです。サイト内に掲載しているお話はすべて二次創作であり、版権元とは一切関わりございません。文章の持ち出し、他所への転記は堅く禁じます。また、内容への苦情、過度な要望にはお応えいたしかねます。最低限のマナーを守った上でお楽しみください。検索避け済みです。<br><br>
+◇ ABOUT HERE  <br>
+【master】Ryo(adult♀)<br>
+【Here is】utakata<br>
+【addres】https://gonzalez0429.github.io/359/<br>
+【link is..】(UN)LINK FREE<br>
+【E-MAIL】contact us → (<a href="https://wavebox.me/wave/4bqep61lv02c4voc/">wave box)</a><br><br>◇About the works<br>
+ギャグ/ラブコメ/シリアス/ダーク/ほのぼの/甘め/現パロ/ミステリ/バッドエンド(メリバ)等。なんでも許せる人向け。<br></p>
+</details></div>join! <a href="http://01s.rknt.jp/entry.php?in_id=utakata&id=babyb0y&guid=on">FUKA</a>/<a href="https://compslink.jp">COMPASS</a>/<a href="http://minor-ds.com/search/rank.cgi?mode=r_link&id=16056">MDS</a>/<a href="http://02s.rknt.jp/entry.php?id=359musou&in_id=0429&guid=on">IROHA</a>/<a href="http://mrank.tv/u/in.php?guid=ON&id=souten&pid=0429">SOUTEN</a>/<a href="http://tougen.nightfall.jp/musou/">MUSOU</a>/<a href="https://mmnn.rankch.com/in.php?rid=utakata">MINOR</a></div>
